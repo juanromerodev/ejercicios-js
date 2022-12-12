@@ -50,8 +50,11 @@ function buscaPalindromos (cadena = ""){
 // 8 
 
 function eliminaPatrones(patron = "", texto = ""){
-
-    console.info(texto.replace(new RegExp(patron,"ig"),""))
+    (typeof cadena !== 'string')
+        ?console.warn(`${cadena} no es un String`)
+        :(cadena.length === 1) 
+            ?console.warn(`${cadena} debe tener de dos a mas caracteres`)
+            :console.info(texto.replace(new RegExp(patron,"ig"),""));
 }
 
 
